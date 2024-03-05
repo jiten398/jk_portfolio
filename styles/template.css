@@ -1,0 +1,40 @@
+/* Add this CSS to your styles/template.css */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 16.666%; /* 6 columns in a row */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolio-thumbnail {
+    overflow: hidden;
+}
+
+.portfolio-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-title {
+    margin-top: 10px;
+}
+
+    /* ... (previous styles remain unchanged) ... */
+
+    .warning-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1001; /* Ensure the warning overlay is above the iframe overlay */
+    }
+
