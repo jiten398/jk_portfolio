@@ -1,6 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Shortcode to display portfolio items with Bootstrap
-function portfolio_shortcode() {
+function jk_portfolio_shortcode() {
     ob_start();
 
     $args = array(
@@ -267,11 +268,11 @@ function portfolio_shortcode() {
     return ob_get_clean();
 }
 
-add_shortcode('portfolio', 'portfolio_shortcode');
+add_shortcode('portfolio', 'jk_portfolio_shortcode');
 
 // Add custom image size for portfolio items
-function custom_portfolio_image_size() {
+function jk_portfolio_image_size() {
     add_image_size('custom_portfolio_size', 400, 600, true); // adjust width and height as needed
 }
 
-add_action('after_setup_theme', 'custom_portfolio_image_size');
+add_action('after_setup_theme', 'jk_portfolio_image_size');
